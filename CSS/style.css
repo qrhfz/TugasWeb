@@ -10,7 +10,9 @@
 nav{
     background: rgba(0, 0, 0, 0.7);
 }
-
+.half-screen{
+    height: 60vh;
+}
 footer {
     
     height: 60px;
@@ -18,4 +20,3 @@ footer {
     width: 100%;
     line-height: 60px;
     background-color: lightgray;
-}
