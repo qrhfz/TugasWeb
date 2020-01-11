@@ -7,12 +7,18 @@
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-nav{
+.transparent{
     background: rgba(0, 0, 0, 0.7);
 }
 .half-screen{
     height: 60vh;
 }
+#btn_shopnow:hover{
+    cursor: pointer;
+    transform: translate(0,15px);
+    transition: 0.2s;
+}
+
 footer {
     position: absolute;
     height: 60px;
@@ -20,5 +26,4 @@ footer {
     width: 100%;
     line-height: 60px;
     background-color: lightgray;
-    
 }
