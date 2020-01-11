@@ -7,7 +7,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-nav{
+.transparent{
     background: rgba(0, 0, 0, 0.7);
 }
 .half-screen{
