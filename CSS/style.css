@@ -60,3 +60,10 @@ body {
     overflow: hidden;
 }
 
+.fotoproduk {
+    max-height: 448px;
+}
+
+.bungkusfoto {
+    background-color: lightgray;
+}
