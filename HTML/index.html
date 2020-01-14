@@ -36,11 +36,14 @@
         <div class="shop-now text-center d-table w-100 h-75">
             <div class="d-table-cell w-100 h-75 align-middle">
                 <h1>Peralatan kami selalu menunggu petualanganmu</h1>
-                <h3 class="my-5 " id="btn_shopnow" style="display: flexbox;width: 300px;height: 60px;margin: auto;padding-top: 30px;">Belanja Sekarang <br><i class="fas fa-angle-down text-center"></i></h3>
+                <h3 class="my-5 " id="btn_shopnow" style="display: flexbox;width: 300px;height: 60px;margin: auto;padding-top: 30px;">
+                    Belanja Sekarang
+                    <br><i class="fas fa-angle-down text-center"></i>
+                </h3>
             </div>
         </div>
     </div>
-    <section class="container-fluid bg-dark pt-5">
+    <section class="container-fluid bg-dark pt-5" id="shopnow">
         <div class="produk-baru">
             <div class="row">
                 <div class="col-md-6 text-light half-screen bg-dark d-table w-100">
@@ -52,10 +55,11 @@
                 <div class="col-md-6 py-4 bg-dark">
                     <div class="row">
                         <div class="col-md-6 py-4">
-                            <img src="../Asset/images/sarungtangan.jpg" style="width: 60%;">
+                            <a href="../HTML/allproduk.html"><img src="../Asset/images/sarungtangan.jpg" style="width: 60%;"></a>
                         </div>
                         <div class="col-md-6 py-4">
-                            <img src="../Asset/images/newarival.jpg" style="width: 60%;height: 100%;">
+                            <a href="../HTML/allproduk.html"><img src="../Asset/images/newarival.jpg" style="width: 60%;height: 100%;"></a>
+
                         </div>
                     </div>
                 </div>
@@ -73,10 +77,12 @@
                 <div class="col-md-6 bg-dark">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="../Asset/images/new arival (3).jpg" style="width: 60%;height: 80%;">
+                            <a href="../HTML/allproduk.html"><img src="../Asset/images/new arival (3).jpg" style="width: 60%;height: 80%;"></a>
+
                         </div>
                         <div class="col-md-6">
-                            <img src="../Asset/images/kompor.jpg" style="width: 60%;height: 80%;">
+                            <a href="../HTML/allproduk.html"><img src="../Asset/images/kompor.jpg" style="width: 60%;height: 80%;"></a>
+
                         </div>
                     </div>
                 </div>
@@ -91,8 +97,8 @@
                         <div class="row">
                             <div class="offset-2"></div>
                             <div class="col-md-8">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima consectetur repudiandae praesentium laudantium iste quis recusandae dolore harum iure cum error ducimus ipsam, fugiat facere unde numquam debitis
-                                    accusantium.
+                                <p>Bahu-membahu untuk membantu para pecinta alam dan pegiat hiking serta kegiatan outdoor untuk memudahkan mereka mendapatkan peralatan yang berkualitas tanpa harus membeli.
+
                                 </p>
                             </div>
                         </div>
@@ -107,17 +113,36 @@
         </div>
         </div>
     </section>
-    <footer class="footer bg-dark">
-        <small>
-        <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © RentalHiking (A11.2018.11425,A11.2018.11452,A11.2018.114,A11.2018.11455) - Powered by PartnerPetualang</div>
-      </small>
+    <footer class="footer">
+        <div class="container text-center">
+            <small>Copyright © RentalHiking (A11.2018.11425, A11.2018.11452, A11.2018.11455) - Powered by PartnerPetualang</small>
+        </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../JS/script.js"></script>
+
+    <script>
+        function goToByScroll(id) {
+            // Reove "link" from the ID
+            id = id.replace("btn_", "");
+            // Scroll
+            $('html,body').animate({
+                    scrollTop: $("#" + id).offset().top
+                },
+                'slow');
+        }
+
+        $("#btn_shopnow").click(function(e) {
+            // Prevent a page reload when a link is pressed
+            e.preventDefault();
+            // Call the scroll function
+            goToByScroll($(this).attr("id"));
+        });
+    </script>
 </body>
 
 </html>
